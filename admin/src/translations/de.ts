@@ -12,7 +12,7 @@ const de = {
     meta: 'ID: { id }, Slug: { key }',
     action: {
       newItem: 'Neuer Eintrag',
-      manage: 'Verwalten',
+      back: 'Zurück',
       collapseAll: 'Alle einklappen',
       expandAll: 'Alle ausklappen',
     },
@@ -32,51 +32,6 @@ const de = {
   },
   popup: {
     navigation: {
-      manage: {
-        header: {
-          LIST: 'Alle Navigationen',
-          CREATE: 'Neue Navigation',
-          DELETE: 'Löschen',
-          ERROR: 'Fehler',
-          EDIT: '"{name}" bearbeiten',
-        },
-        button: {
-          cancel: 'Abbrechen',
-          delete: 'Löschen',
-          save: 'Speichern',
-          edit: 'Bearbeiten',
-          create: 'Erstellen',
-          goBack: 'Zurück',
-          purge: 'Lese-Cache leeren',
-        },
-        table: {
-          id: 'ID',
-          name: 'Name',
-          locale: 'Sprachversionen',
-          visibility: 'Sichtbarkeit',
-          hasSelected: '{count} Einträge ausgewählt',
-        },
-        footer: {
-          button: {
-            purge: 'Leeren',
-          },
-        },
-        purge: {
-          header:
-            'Diese Aktion leert den API-Lese-Cache. Dadurch können die untenstehenden Navigationen kurzzeitig langsamer gelesen werden.',
-        },
-        delete: {
-          header: 'Die folgenden Navigationen werden entfernt:',
-        },
-        error: {
-          header: 'Ein Fehler ist aufgetreten :(',
-          message: 'Beim Verarbeiten der Anfrage ist ein Fehler aufgetreten.',
-        },
-        navigation: {
-          visible: 'sichtbar',
-          hidden: 'ausgeblendet',
-        },
-      },
       form: {
         name: {
           label: 'Name',
@@ -232,6 +187,67 @@ const de = {
       noAccess: 'Kein Zugriff',
       not: {
         allowed: 'Sie haben offenbar keinen Zugriff auf diese Seite...',
+      },
+    },
+    overview: {
+      header: {
+        subtitle: '{count, plural, one {# Navigation gefunden} other {# Navigationen gefunden}}',
+      },
+      action: {
+        create: 'Neue Navigation',
+        purgeAll: 'Lese-Cache leeren',
+      },
+      table: {
+        header: {
+          name: 'Name',
+          locales: 'Sprachversionen',
+          visibility: 'Sichtbarkeit',
+          items: 'Einträge',
+          actions: 'Aktionen',
+        },
+        action: {
+          edit: 'Navigation bearbeiten',
+          delete: 'Navigation löschen',
+          purge: 'Lese-Cache der Navigation leeren',
+        },
+        visibility: {
+          visible: 'Sichtbar',
+          hidden: 'Ausgeblendet',
+        },
+      },
+      empty: {
+        description: 'Sie haben noch keine Navigationen',
+      },
+      modal: {
+        create: {
+          header: 'Neue Navigation',
+        },
+        edit: {
+          header: '"{name}" bearbeiten',
+        },
+        button: {
+          cancel: 'Abbrechen',
+          save: 'Speichern',
+        },
+      },
+      dialog: {
+        delete: {
+          header: 'Navigation löschen',
+          description:
+            'Möchten Sie "{name}" wirklich löschen? Alle Einträge und Sprachversionen werden entfernt.',
+          confirm: 'Löschen',
+        },
+        purge: {
+          header: 'Lese-Cache leeren',
+          description:
+            'Diese Aktion leert den API-Lese-Cache für "{name}". Dadurch können Lesevorgänge kurzzeitig langsamer sein.',
+          descriptionAll:
+            'Diese Aktion leert den API-Lese-Cache für alle Navigationen. Dadurch können Lesevorgänge kurzzeitig langsamer sein.',
+          confirm: 'Cache leeren',
+        },
+      },
+      notification: {
+        error: 'Beim Speichern der Navigation ist ein Fehler aufgetreten',
       },
     },
     main: {

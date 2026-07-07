@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import { Field } from '@sensinum/strapi-utils';
 
-import { getTrad } from '../../../../../translations';
-import { Effect, FormChangeEvent, FormItemErrorSchema } from '../../../../../types';
-import { Navigation } from '../types';
+import { getTrad } from '../../../../translations';
+import { Effect, FormChangeEvent, FormItemErrorSchema } from '../../../../types';
+import { Navigation } from '../../types';
 import { formSchema } from './hooks';
 
 interface Props<T extends Partial<Navigation>> {
@@ -95,6 +95,10 @@ export const Form = <T extends Partial<Navigation>>({
   }, []);
 
   useEffect(() => {
+    if (name === undefined && visible === undefined) {
+      return;
+    }
+
     if (`${name}-${visible}` !== `${navigation.name}-${navigation.visible}`) {
       const { error } = formSchema({ alreadyUsedNames }).safeParse(formValue);
 

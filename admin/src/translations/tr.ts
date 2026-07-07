@@ -12,7 +12,7 @@ const tr = {
     meta: 'ID: { id }, slug: { key }',
     action: {
       newItem: 'Yeni Öğe',
-      manage: 'Yönet',
+      back: 'Geri',
       collapseAll: 'Tümünü Daralt',
       expandAll: 'Tümünü Genişlet',
     },
@@ -32,51 +32,6 @@ const tr = {
   },
   popup: {
     navigation: {
-      manage: {
-        header: {
-          LIST: 'Tüm navigasyonlar',
-          CREATE: 'Yeni navigasyon',
-          DELETE: 'Silme işlemi',
-          ERROR: 'Hata',
-          EDIT: '"{name}" düzenleniyor',
-        },
-        button: {
-          cancel: 'İptal',
-          delete: 'Sil',
-          save: 'Kaydet',
-          edit: 'Düzenle',
-          create: 'Oluştur',
-          goBack: 'Geri dön',
-          purge: 'Önbelleği temizle',
-        },
-        table: {
-          id: 'Id',
-          name: 'Ad',
-          locale: 'Dil versiyonları',
-          visibility: 'Görünürlük',
-          hasSelected: '{count} öğe seçildi',
-        },
-        footer: {
-          button: {
-            purge: 'Temizle',
-          },
-        },
-        purge: {
-          header:
-            'Bu işlem API okuma önbelleğini temizleyecektir. Aşağıdaki navigasyonlar için kısa bir yavaşlama yaşanacaktır.',
-        },
-        delete: {
-          header: 'Aşağıdaki navigasyonlar kaldırılacaktır:',
-        },
-        error: {
-          header: 'Bir hata oluştu :(',
-          message: 'İstek işlenirken bir hata oluştu.',
-        },
-        navigation: {
-          visible: 'görünür',
-          hidden: 'gizli',
-        },
-      },
       form: {
         name: {
           label: 'Ad',
@@ -230,6 +185,67 @@ const tr = {
       noAccess: 'Erişim yok',
       not: {
         allowed: 'Üzgünüz! Bu sayfaya erişim yetkiniz yok gibi görünüyor...',
+      },
+    },
+    overview: {
+      header: {
+        subtitle: '{count, plural, one {# navigasyon bulundu} other {# navigasyon bulundu}}',
+      },
+      action: {
+        create: 'Yeni navigasyon',
+        purgeAll: 'Önbelleği temizle',
+      },
+      table: {
+        header: {
+          name: 'Ad',
+          locales: 'Dil versiyonları',
+          visibility: 'Görünürlük',
+          items: 'Öğeler',
+          actions: 'İşlemler',
+        },
+        action: {
+          edit: 'Navigasyonu düzenle',
+          delete: 'Navigasyonu sil',
+          purge: 'Navigasyonun okuma önbelleğini temizle',
+        },
+        visibility: {
+          visible: 'Görünür',
+          hidden: 'Gizli',
+        },
+      },
+      empty: {
+        description: 'Henüz bir navigasyonunuz yok',
+      },
+      modal: {
+        create: {
+          header: 'Yeni navigasyon',
+        },
+        edit: {
+          header: '"{name}" düzenleniyor',
+        },
+        button: {
+          cancel: 'İptal',
+          save: 'Kaydet',
+        },
+      },
+      dialog: {
+        delete: {
+          header: 'Navigasyonu sil',
+          description:
+            '"{name}" navigasyonunu silmek istediğinizden emin misiniz? Tüm öğeleri ve dil versiyonları kaldırılacaktır.',
+          confirm: 'Sil',
+        },
+        purge: {
+          header: 'Önbelleği temizle',
+          description:
+            'Bu işlem "{name}" için API okuma önbelleğini temizleyecektir. Okumalarda kısa bir yavaşlama yaşanacaktır.',
+          descriptionAll:
+            'Bu işlem tüm navigasyonlar için API okuma önbelleğini temizleyecektir. Okumalarda kısa bir yavaşlama yaşanacaktır.',
+          confirm: 'Önbelleği temizle',
+        },
+      },
+      notification: {
+        error: 'Navigasyon kaydedilirken bir hata oluştu',
       },
     },
     main: {
