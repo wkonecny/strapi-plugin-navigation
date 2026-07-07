@@ -55,7 +55,7 @@ export const NavigationHeader: React.FC<Props> = ({
     <Layouts.Header
       navigationAction={
         <Link tag={NavLink} startIcon={<ArrowLeft />} to={`/plugins/${PLUGIN_ID}`}>
-          {formatMessage(getTrad('header.action.back'))}
+          {formatMessage(getTrad('popup.navigation.manage.button.goBack'))}
         </Link>
       }
       title={activeNavigation?.name ?? formatMessage(getTrad('header.title', 'UI Navigation'))}

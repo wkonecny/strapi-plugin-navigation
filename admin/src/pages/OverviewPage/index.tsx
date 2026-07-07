@@ -113,7 +113,7 @@ const OverviewPage = () => {
         console.warn(error);
         toggleNotification({
           type: 'warning',
-          message: formatMessage(getTrad('pages.overview.notification.error')),
+          message: formatMessage(getTrad('notification.error.common')),
         });
       },
     };
@@ -181,11 +181,11 @@ const OverviewPage = () => {
                     startIcon={<Feather />}
                     onClick={() => setOverlay({ type: 'purge' })}
                   >
-                    {formatMessage(getTrad('pages.overview.action.purgeAll'))}
+                    {formatMessage(getTrad('popup.navigation.manage.button.purge'))}
                   </Button>
                 )}
                 <Button startIcon={<Plus />} onClick={() => setOverlay({ type: 'create' })}>
-                  {formatMessage(getTrad('pages.overview.action.create'))}
+                  {formatMessage(getTrad('popup.navigation.manage.header.CREATE'))}
                 </Button>
               </Flex>
             )
@@ -203,7 +203,7 @@ const OverviewPage = () => {
                     startIcon={<Plus />}
                     onClick={() => setOverlay({ type: 'create' })}
                   >
-                    {formatMessage(getTrad('pages.overview.action.create'))}
+                    {formatMessage(getTrad('popup.navigation.manage.header.CREATE'))}
                   </Button>
                 )
               }
@@ -214,27 +214,27 @@ const OverviewPage = () => {
                 <Tr>
                   <Th>
                     <Typography variant="sigma" textColor="neutral600">
-                      {formatMessage(getTrad('pages.overview.table.header.name'))}
+                      {formatMessage(getTrad('popup.navigation.manage.table.name'))}
                     </Typography>
                   </Th>
                   <Th>
                     <Typography variant="sigma" textColor="neutral600">
-                      {formatMessage(getTrad('pages.overview.table.header.locales'))}
+                      {formatMessage(getTrad('popup.navigation.manage.table.locale'))}
                     </Typography>
                   </Th>
                   <Th>
                     <Typography variant="sigma" textColor="neutral600">
-                      {formatMessage(getTrad('pages.overview.table.header.visibility'))}
+                      {formatMessage(getTrad('popup.navigation.manage.table.visibility'))}
                     </Typography>
                   </Th>
                   <Th>
                     <Typography variant="sigma" textColor="neutral600">
-                      {formatMessage(getTrad('pages.overview.table.header.items'))}
+                      {formatMessage(getTrad('pages.overview.table.items'))}
                     </Typography>
                   </Th>
                   <Th>
                     <VisuallyHidden>
-                      {formatMessage(getTrad('pages.overview.table.header.actions'))}
+                      {formatMessage(getTrad('pages.overview.table.actions'))}
                     </VisuallyHidden>
                   </Th>
                 </Tr>
@@ -266,8 +266,8 @@ const OverviewPage = () => {
                       >
                         <Typography tag="span" variant="omega" fontWeight="bold">
                           {navigation.visible
-                            ? formatMessage(getTrad('pages.overview.table.visibility.visible'))
-                            : formatMessage(getTrad('pages.overview.table.visibility.hidden'))}
+                            ? formatMessage(getTrad('popup.navigation.form.visible.toggle.visible'))
+                            : formatMessage(getTrad('popup.navigation.form.visible.toggle.hidden'))}
                         </Typography>
                       </Status>
                     </Td>
@@ -279,7 +279,7 @@ const OverviewPage = () => {
                         {canUpdate && (
                           <IconButton
                             onClick={() => setOverlay({ type: 'edit', navigation })}
-                            label={formatMessage(getTrad('pages.overview.table.action.edit'))}
+                            label={formatMessage(getTrad('popup.navigation.manage.button.edit'))}
                             variant="ghost"
                           >
                             <Pencil />
@@ -288,7 +288,7 @@ const OverviewPage = () => {
                         {canUpdate && (
                           <IconButton
                             onClick={() => setOverlay({ type: 'delete', navigation })}
-                            label={formatMessage(getTrad('pages.overview.table.action.delete'))}
+                            label={formatMessage(getTrad('popup.navigation.manage.button.delete'))}
                             variant="ghost"
                           >
                             <Trash />
@@ -297,7 +297,7 @@ const OverviewPage = () => {
                         {canUpdate && hasCache && (
                           <IconButton
                             onClick={() => setOverlay({ type: 'purge', navigation })}
-                            label={formatMessage(getTrad('pages.overview.table.action.purge'))}
+                            label={formatMessage(getTrad('popup.navigation.manage.button.purge'))}
                             variant="ghost"
                           >
                             <Feather />
@@ -331,15 +331,13 @@ const OverviewPage = () => {
             <ConfirmationDialog
               isVisible
               isActionAsync={isMutating}
-              header={formatMessage(getTrad('pages.overview.dialog.delete.header'))}
-              labelConfirm={formatMessage(getTrad('pages.overview.dialog.delete.confirm'))}
+              header={formatMessage(getTrad('popup.navigation.manage.header.DELETE'))}
+              labelConfirm={formatMessage(getTrad('popup.navigation.manage.button.delete'))}
               iconConfirm={<Trash />}
               onConfirm={handleDelete}
               onCancel={() => setOverlay(null)}
             >
-              {formatMessage(getTrad('pages.overview.dialog.delete.description'), {
-                name: overlay.navigation.name,
-              })}
+              {`${formatMessage(getTrad('popup.navigation.manage.delete.header'))} "${overlay.navigation.name}"`}
             </ConfirmationDialog>
           )}
 
@@ -347,17 +345,15 @@ const OverviewPage = () => {
             <ConfirmationDialog
               isVisible
               isActionAsync={isMutating}
-              header={formatMessage(getTrad('pages.overview.dialog.purge.header'))}
-              labelConfirm={formatMessage(getTrad('pages.overview.dialog.purge.confirm'))}
+              header={formatMessage(getTrad('popup.navigation.manage.button.purge'))}
+              labelConfirm={formatMessage(getTrad('popup.navigation.manage.footer.button.purge'))}
               iconConfirm={<Feather />}
               onConfirm={handlePurge}
               onCancel={() => setOverlay(null)}
             >
               {overlay.navigation
-                ? formatMessage(getTrad('pages.overview.dialog.purge.description'), {
-                    name: overlay.navigation.name,
-                  })
-                : formatMessage(getTrad('pages.overview.dialog.purge.descriptionAll'))}
+                ? `${formatMessage(getTrad('popup.navigation.manage.purge.header'))} "${overlay.navigation.name}"`
+                : formatMessage(getTrad('popup.navigation.manage.purge.header'))}
             </ConfirmationDialog>
           )}
         </Layouts.Content>

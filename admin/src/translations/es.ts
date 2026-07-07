@@ -12,7 +12,6 @@ const en = {
     meta: 'ID: { id }, slug: { key }',
     action: {
       newItem: 'Nuevo ítem',
-      back: 'Volver',
       collapseAll: 'Colapsar todo',
       expandAll: 'Expandir todo',
     },
@@ -32,6 +31,38 @@ const en = {
   },
   popup: {
     navigation: {
+      manage: {
+        header: {
+          CREATE: 'Nueva navegación',
+          DELETE: 'Eliminando',
+          EDIT: 'Editando "{name}"',
+        },
+        button: {
+          cancel: 'Cancelar',
+          delete: 'Eliminar',
+          save: 'Guardar',
+          edit: 'Edit',
+          goBack: 'Volver',
+          purge: 'Borrar caché de lectura',
+        },
+        table: {
+          name: 'Nombre',
+          locale: 'Versiones de idioma',
+          visibility: 'Visibilidad',
+        },
+        footer: {
+          button: {
+            purge: 'Clear',
+          },
+        },
+        purge: {
+          header:
+            'Esta acción limpiará la caché de lectura de la API. Esto puede causar una breve ralentización en las lecturas de las navegaciones siguientes.',
+        },
+        delete: {
+          header: 'Las siguientes navegaciones serán eliminadas:',
+        },
+      },
       form: {
         name: {
           label: 'Nombre',
@@ -193,61 +224,12 @@ const en = {
         subtitle:
           '{count, plural, one {# navegación encontrada} other {# navegaciones encontradas}}',
       },
-      action: {
-        create: 'Nueva navegación',
-        purgeAll: 'Borrar caché de lectura',
-      },
       table: {
-        header: {
-          name: 'Nombre',
-          locales: 'Versiones de idioma',
-          visibility: 'Visibilidad',
-          items: 'Ítems',
-          actions: 'Acciones',
-        },
-        action: {
-          edit: 'Editar navegación',
-          delete: 'Eliminar navegación',
-          purge: 'Borrar caché de lectura de la navegación',
-        },
-        visibility: {
-          visible: 'Visible',
-          hidden: 'Oculta',
-        },
+        items: 'Ítems',
+        actions: 'Acciones',
       },
       empty: {
         description: 'Todavía no tienes ninguna navegación',
-      },
-      modal: {
-        create: {
-          header: 'Nueva navegación',
-        },
-        edit: {
-          header: 'Editando "{name}"',
-        },
-        button: {
-          cancel: 'Cancelar',
-          save: 'Guardar',
-        },
-      },
-      dialog: {
-        delete: {
-          header: 'Eliminar navegación',
-          description:
-            '¿Seguro que quieres eliminar "{name}"? Se eliminarán todos sus ítems y versiones de idioma.',
-          confirm: 'Eliminar',
-        },
-        purge: {
-          header: 'Borrar caché de lectura',
-          description:
-            'Esta acción limpiará la caché de lectura de la API para "{name}". Esto puede causar una breve ralentización en las lecturas.',
-          descriptionAll:
-            'Esta acción limpiará la caché de lectura de la API para todas las navegaciones. Esto puede causar una breve ralentización en las lecturas.',
-          confirm: 'Borrar caché',
-        },
-      },
-      notification: {
-        error: 'Ocurrió un error al guardar la navegación',
       },
     },
     main: {

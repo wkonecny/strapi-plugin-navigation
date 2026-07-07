@@ -12,7 +12,6 @@ const tr = {
     meta: 'ID: { id }, slug: { key }',
     action: {
       newItem: 'Yeni Öğe',
-      back: 'Geri',
       collapseAll: 'Tümünü Daralt',
       expandAll: 'Tümünü Genişlet',
     },
@@ -32,6 +31,38 @@ const tr = {
   },
   popup: {
     navigation: {
+      manage: {
+        header: {
+          CREATE: 'Yeni navigasyon',
+          DELETE: 'Silme işlemi',
+          EDIT: '"{name}" düzenleniyor',
+        },
+        button: {
+          cancel: 'İptal',
+          delete: 'Sil',
+          save: 'Kaydet',
+          edit: 'Düzenle',
+          goBack: 'Geri dön',
+          purge: 'Önbelleği temizle',
+        },
+        table: {
+          name: 'Ad',
+          locale: 'Dil versiyonları',
+          visibility: 'Görünürlük',
+        },
+        footer: {
+          button: {
+            purge: 'Temizle',
+          },
+        },
+        purge: {
+          header:
+            'Bu işlem API okuma önbelleğini temizleyecektir. Aşağıdaki navigasyonlar için kısa bir yavaşlama yaşanacaktır.',
+        },
+        delete: {
+          header: 'Aşağıdaki navigasyonlar kaldırılacaktır:',
+        },
+      },
       form: {
         name: {
           label: 'Ad',
@@ -191,61 +222,12 @@ const tr = {
       header: {
         subtitle: '{count, plural, one {# navigasyon bulundu} other {# navigasyon bulundu}}',
       },
-      action: {
-        create: 'Yeni navigasyon',
-        purgeAll: 'Önbelleği temizle',
-      },
       table: {
-        header: {
-          name: 'Ad',
-          locales: 'Dil versiyonları',
-          visibility: 'Görünürlük',
-          items: 'Öğeler',
-          actions: 'İşlemler',
-        },
-        action: {
-          edit: 'Navigasyonu düzenle',
-          delete: 'Navigasyonu sil',
-          purge: 'Navigasyonun okuma önbelleğini temizle',
-        },
-        visibility: {
-          visible: 'Görünür',
-          hidden: 'Gizli',
-        },
+        items: 'Öğeler',
+        actions: 'İşlemler',
       },
       empty: {
         description: 'Henüz bir navigasyonunuz yok',
-      },
-      modal: {
-        create: {
-          header: 'Yeni navigasyon',
-        },
-        edit: {
-          header: '"{name}" düzenleniyor',
-        },
-        button: {
-          cancel: 'İptal',
-          save: 'Kaydet',
-        },
-      },
-      dialog: {
-        delete: {
-          header: 'Navigasyonu sil',
-          description:
-            '"{name}" navigasyonunu silmek istediğinizden emin misiniz? Tüm öğeleri ve dil versiyonları kaldırılacaktır.',
-          confirm: 'Sil',
-        },
-        purge: {
-          header: 'Önbelleği temizle',
-          description:
-            'Bu işlem "{name}" için API okuma önbelleğini temizleyecektir. Okumalarda kısa bir yavaşlama yaşanacaktır.',
-          descriptionAll:
-            'Bu işlem tüm navigasyonlar için API okuma önbelleğini temizleyecektir. Okumalarda kısa bir yavaşlama yaşanacaktır.',
-          confirm: 'Önbelleği temizle',
-        },
-      },
-      notification: {
-        error: 'Navigasyon kaydedilirken bir hata oluştu',
       },
     },
     main: {

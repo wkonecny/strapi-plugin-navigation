@@ -12,7 +12,6 @@ const en = {
     meta: 'ID: { id }, slug: { key }',
     action: {
       newItem: 'New Item',
-      back: 'Back',
       collapseAll: 'Collapse All',
       expandAll: 'Expand All',
     },
@@ -32,6 +31,38 @@ const en = {
   },
   popup: {
     navigation: {
+      manage: {
+        header: {
+          CREATE: 'New navigation',
+          DELETE: 'Deleting',
+          EDIT: 'Editing "{name}"',
+        },
+        button: {
+          cancel: 'Cancel',
+          delete: 'Delete',
+          save: 'Save',
+          edit: 'Edit',
+          goBack: 'Go back',
+          purge: 'Clear read cache',
+        },
+        table: {
+          name: 'Name',
+          locale: 'Locale versions',
+          visibility: 'Visibility',
+        },
+        footer: {
+          button: {
+            purge: 'Clear',
+          },
+        },
+        purge: {
+          header:
+            'This action will clear API read cache. This will result in brief slowdown of reads for navigations below.',
+        },
+        delete: {
+          header: 'Following navigations will be removed:',
+        },
+      },
       form: {
         name: {
           label: 'Name',
@@ -191,61 +222,12 @@ const en = {
       header: {
         subtitle: '{count, plural, one {# navigation} other {# navigations}} found',
       },
-      action: {
-        create: 'New navigation',
-        purgeAll: 'Clear read cache',
-      },
       table: {
-        header: {
-          name: 'Name',
-          locales: 'Locale versions',
-          visibility: 'Visibility',
-          items: 'Items',
-          actions: 'Actions',
-        },
-        action: {
-          edit: 'Edit navigation',
-          delete: 'Delete navigation',
-          purge: 'Clear navigation read cache',
-        },
-        visibility: {
-          visible: 'Visible',
-          hidden: 'Hidden',
-        },
+        items: 'Items',
+        actions: 'Actions',
       },
       empty: {
         description: 'You don’t have any navigations yet',
-      },
-      modal: {
-        create: {
-          header: 'New navigation',
-        },
-        edit: {
-          header: 'Editing "{name}"',
-        },
-        button: {
-          cancel: 'Cancel',
-          save: 'Save',
-        },
-      },
-      dialog: {
-        delete: {
-          header: 'Delete navigation',
-          description:
-            'Are you sure you want to delete "{name}"? All of its items and locale versions will be removed.',
-          confirm: 'Delete',
-        },
-        purge: {
-          header: 'Clear read cache',
-          description:
-            'This action will clear the API read cache for "{name}". This will result in a brief slowdown of reads.',
-          descriptionAll:
-            'This action will clear the API read cache for all navigations. This will result in a brief slowdown of reads.',
-          confirm: 'Clear cache',
-        },
-      },
-      notification: {
-        error: 'An error occurred while saving the navigation',
       },
     },
     main: {

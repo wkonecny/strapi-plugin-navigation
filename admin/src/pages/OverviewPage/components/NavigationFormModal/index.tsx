@@ -47,10 +47,10 @@ export const NavigationFormModal = ({
         <Modal.Header>
           <Modal.Title>
             {isEdit
-              ? formatMessage(getTrad('pages.overview.modal.edit.header'), {
+              ? formatMessage(getTrad('popup.navigation.manage.header.EDIT'), {
                   name: navigation.name,
                 })
-              : formatMessage(getTrad('pages.overview.modal.create.header'))}
+              : formatMessage(getTrad('popup.navigation.manage.header.CREATE'))}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -64,11 +64,11 @@ export const NavigationFormModal = ({
         <Modal.Footer>
           <Modal.Close>
             <Button variant="tertiary" disabled={isLoading}>
-              {formatMessage(getTrad('pages.overview.modal.button.cancel'))}
+              {formatMessage(getTrad('popup.navigation.manage.button.cancel'))}
             </Button>
           </Modal.Close>
           <Button onClick={() => onSubmit(current)} disabled={isLoading || isDisabled}>
-            {formatMessage(getTrad('pages.overview.modal.button.save'))}
+            {formatMessage(getTrad('popup.navigation.manage.button.save'))}
           </Button>
         </Modal.Footer>
       </Modal.Content>

@@ -12,7 +12,6 @@ const fr = {
     meta: 'ID : { id }, slug : { key }',
     action: {
       newItem: 'Nouvel élément',
-      back: 'Retour',
       collapseAll: 'Tout réduire',
       expandAll: 'Tout développer',
     },
@@ -32,6 +31,38 @@ const fr = {
   },
   popup: {
     navigation: {
+      manage: {
+        header: {
+          CREATE: 'Nouvelle navigation',
+          DELETE: 'Suppression',
+          EDIT: 'Édition de « {name} »',
+        },
+        button: {
+          cancel: 'Annuler',
+          delete: 'Supprimer',
+          save: 'Enregistrer',
+          edit: 'Modifier',
+          goBack: 'Retour',
+          purge: 'Effacer le cache de lecture',
+        },
+        table: {
+          name: 'Nom',
+          locale: 'Versions locales',
+          visibility: 'Visibilité',
+        },
+        footer: {
+          button: {
+            purge: 'Effacer',
+          },
+        },
+        purge: {
+          header:
+            "Cette action effacera le cache de lecture de l'API. Cela entraînera un ralentissement temporaire des lectures pour les navigations ci-dessous.",
+        },
+        delete: {
+          header: 'Les navigations suivantes seront supprimées :',
+        },
+      },
       form: {
         name: {
           label: 'Nom',
@@ -192,61 +223,12 @@ const fr = {
       header: {
         subtitle: '{count, plural, one {# navigation trouvée} other {# navigations trouvées}}',
       },
-      action: {
-        create: 'Nouvelle navigation',
-        purgeAll: 'Effacer le cache de lecture',
-      },
       table: {
-        header: {
-          name: 'Nom',
-          locales: 'Versions locales',
-          visibility: 'Visibilité',
-          items: 'Éléments',
-          actions: 'Actions',
-        },
-        action: {
-          edit: 'Modifier la navigation',
-          delete: 'Supprimer la navigation',
-          purge: 'Effacer le cache de lecture de la navigation',
-        },
-        visibility: {
-          visible: 'Visible',
-          hidden: 'Masquée',
-        },
+        items: 'Éléments',
+        actions: 'Actions',
       },
       empty: {
         description: "Vous n'avez pas encore de navigation",
-      },
-      modal: {
-        create: {
-          header: 'Nouvelle navigation',
-        },
-        edit: {
-          header: 'Édition de « {name} »',
-        },
-        button: {
-          cancel: 'Annuler',
-          save: 'Enregistrer',
-        },
-      },
-      dialog: {
-        delete: {
-          header: 'Supprimer la navigation',
-          description:
-            'Voulez-vous vraiment supprimer « {name} » ? Tous ses éléments et versions locales seront supprimés.',
-          confirm: 'Supprimer',
-        },
-        purge: {
-          header: 'Effacer le cache de lecture',
-          description:
-            "Cette action effacera le cache de lecture de l'API pour « {name} ». Cela entraînera un ralentissement temporaire des lectures.",
-          descriptionAll:
-            "Cette action effacera le cache de lecture de l'API pour toutes les navigations. Cela entraînera un ralentissement temporaire des lectures.",
-          confirm: 'Effacer le cache',
-        },
-      },
-      notification: {
-        error: "Une erreur est survenue lors de l'enregistrement de la navigation",
       },
     },
     main: {
