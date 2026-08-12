@@ -37,7 +37,7 @@ describe('Navigation', () => {
         it('should read all from default plugin config when nothing is present in database', async () => {
           // Given
           getStore.mockReturnValue({});
-          getFromConfig.mockReturnValue({});
+          getFromConfig.mockReturnValue(undefined);
           getContentTypes.mockReturnValue({});
 
           // When
@@ -67,7 +67,7 @@ describe('Navigation', () => {
           getStore.mockReturnValue({
             allowedLevels: faker.string.alphanumeric(),
           });
-          getFromConfig.mockReturnValue({});
+          getFromConfig.mockReturnValue(undefined);
           getContentTypes.mockReturnValue({});
 
           // Then
@@ -89,7 +89,7 @@ describe('Navigation', () => {
           getStore.mockReturnValue({
             additionalFields: invalidField,
           });
-          getFromConfig.mockReturnValue({});
+          getFromConfig.mockReturnValue(undefined);
           getContentTypes.mockReturnValue({});
 
           // Then
@@ -108,7 +108,24 @@ describe('Navigation', () => {
           getStore.mockReturnValue({
             allowedLevels,
           });
-          getFromConfig.mockReturnValue({});
+          getFromConfig.mockReturnValue(undefined);
+          getContentTypes.mockReturnValue({});
+
+          // When
+          const result = await configSetup({ strapi });
+
+          // Then
+          expect(result).toHaveProperty('allowedLevels', allowedLevels);
+        });
+
+        it('should use code config values when DB is empty', async () => {
+          // Given
+          const allowedLevels = 5; // non-default value (default is 2)
+
+          getStore.mockReturnValue(null);
+          getFromConfig.mockImplementation((key: string) =>
+            key === 'allowedLevels' ? allowedLevels : undefined
+          );
           getContentTypes.mockReturnValue({});
 
           // When
@@ -147,7 +164,7 @@ describe('Navigation', () => {
           getStore.mockReturnValue({
             contentTypes: allContentTypes,
           });
-          getFromConfig.mockReturnValue({});
+          getFromConfig.mockReturnValue(undefined);
 
           // When
           const result = await configSetup({ strapi });
@@ -175,7 +192,7 @@ describe('Navigation', () => {
             preferCustomContentTypes,
             isCacheEnabled,
           });
-          getFromConfig.mockReturnValue({});
+          getFromConfig.mockReturnValue(undefined);
           getContentTypes.mockReturnValue({});
 
           // When
