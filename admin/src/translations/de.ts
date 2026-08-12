@@ -12,6 +12,7 @@ const de = {
     meta: 'ID: { id }, Slug: { key }',
     action: {
       newItem: 'Neuer Eintrag',
+      manage: 'Verwalten',
       collapseAll: 'Alle einklappen',
       expandAll: 'Alle ausklappen',
     },
@@ -33,8 +34,10 @@ const de = {
     navigation: {
       manage: {
         header: {
+          LIST: 'Alle Navigationen',
           CREATE: 'Neue Navigation',
           DELETE: 'Löschen',
+          ERROR: 'Fehler',
           EDIT: '"{name}" bearbeiten',
         },
         button: {
@@ -42,13 +45,16 @@ const de = {
           delete: 'Löschen',
           save: 'Speichern',
           edit: 'Bearbeiten',
+          create: 'Erstellen',
           goBack: 'Zurück',
           purge: 'Lese-Cache leeren',
         },
         table: {
+          id: 'ID',
           name: 'Name',
           locale: 'Sprachversionen',
           visibility: 'Sichtbarkeit',
+          hasSelected: '{count} Einträge ausgewählt',
         },
         footer: {
           button: {
@@ -61,6 +67,14 @@ const de = {
         },
         delete: {
           header: 'Die folgenden Navigationen werden entfernt:',
+        },
+        error: {
+          header: 'Ein Fehler ist aufgetreten :(',
+          message: 'Beim Verarbeiten der Anfrage ist ein Fehler aufgetreten.',
+        },
+        navigation: {
+          visible: 'sichtbar',
+          hidden: 'ausgeblendet',
         },
       },
       form: {
@@ -274,6 +288,10 @@ const de = {
         cascadeMenuAttached: {
           label: 'Menüzuordnung vererben',
           hint: 'Deaktivieren, wenn "Im Menü anzeigen" nicht an untergeordnete Einträge vererbt werden soll',
+        },
+        overviewUi: {
+          label: 'Neue Navigationsoberfläche',
+          hint: 'Aktiviert die neue Oberfläche mit Navigationsübersicht und Detailseiten',
         },
         preferCustomContentTypes: {
           label: 'API-Content-Types bevorzugen',

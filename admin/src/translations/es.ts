@@ -12,6 +12,7 @@ const en = {
     meta: 'ID: { id }, slug: { key }',
     action: {
       newItem: 'Nuevo ítem',
+      manage: 'Gestionar',
       collapseAll: 'Colapsar todo',
       expandAll: 'Expandir todo',
     },
@@ -33,8 +34,10 @@ const en = {
     navigation: {
       manage: {
         header: {
+          LIST: 'Todas las navegaciones',
           CREATE: 'Nueva navegación',
           DELETE: 'Eliminando',
+          ERROR: 'Error',
           EDIT: 'Editando "{name}"',
         },
         button: {
@@ -42,13 +45,16 @@ const en = {
           delete: 'Eliminar',
           save: 'Guardar',
           edit: 'Edit',
+          create: 'Create',
           goBack: 'Volver',
           purge: 'Borrar caché de lectura',
         },
         table: {
+          id: 'Id',
           name: 'Nombre',
           locale: 'Versiones de idioma',
           visibility: 'Visibilidad',
+          hasSelected: '{count} entradas seleccionadas',
         },
         footer: {
           button: {
@@ -61,6 +67,14 @@ const en = {
         },
         delete: {
           header: 'Las siguientes navegaciones serán eliminadas:',
+        },
+        error: {
+          header: 'Ocurrió un error :(',
+          message: 'Ocurrió un error al procesar la solicitud.',
+        },
+        navigation: {
+          visible: 'visible',
+          hidden: 'oculto',
         },
       },
       form: {
@@ -274,6 +288,10 @@ const en = {
         cascadeMenuAttached: {
           label: 'Menú en cascada adjunto',
           hint: 'Deshabilitar si no deseas que "Menú adjunto" se propague a los elementos secundarios',
+        },
+        overviewUi: {
+          label: 'Nueva interfaz de navegación',
+          hint: 'Activa la nueva interfaz con una vista general y páginas de detalle',
         },
         preferCustomContentTypes: {
           label: 'Preferir tipos de contenido de API',

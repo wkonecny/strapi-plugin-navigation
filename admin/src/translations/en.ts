@@ -12,6 +12,7 @@ const en = {
     meta: 'ID: { id }, slug: { key }',
     action: {
       newItem: 'New Item',
+      manage: 'Manage',
       collapseAll: 'Collapse All',
       expandAll: 'Expand All',
     },
@@ -33,8 +34,10 @@ const en = {
     navigation: {
       manage: {
         header: {
+          LIST: 'All navigations',
           CREATE: 'New navigation',
           DELETE: 'Deleting',
+          ERROR: 'Error',
           EDIT: 'Editing "{name}"',
         },
         button: {
@@ -42,13 +45,16 @@ const en = {
           delete: 'Delete',
           save: 'Save',
           edit: 'Edit',
+          create: 'Create',
           goBack: 'Go back',
           purge: 'Clear read cache',
         },
         table: {
+          id: 'Id',
           name: 'Name',
           locale: 'Locale versions',
           visibility: 'Visibility',
+          hasSelected: '{count} entries selected',
         },
         footer: {
           button: {
@@ -61,6 +67,14 @@ const en = {
         },
         delete: {
           header: 'Following navigations will be removed:',
+        },
+        error: {
+          header: 'An error happened :(',
+          message: 'An error happened while processing request.',
+        },
+        navigation: {
+          visible: 'visible',
+          hidden: 'hidden',
         },
       },
       form: {
@@ -272,6 +286,10 @@ const en = {
         cascadeMenuAttached: {
           label: 'Cascade menu attached',
           hint: 'Disable if you don\'t want "Menu attached" to cascade on child items',
+        },
+        overviewUi: {
+          label: 'New navigation interface',
+          hint: 'Enable the new interface with a navigation overview and detail pages',
         },
         preferCustomContentTypes: {
           label: 'Prefer API Content Types',

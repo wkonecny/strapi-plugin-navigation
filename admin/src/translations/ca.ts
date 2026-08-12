@@ -12,6 +12,7 @@ const ca = {
     meta: 'ID: { id }, slug: { key }',
     action: {
       newItem: 'Nouvel élément',
+      manage: 'Gérer',
       collapseAll: 'Tout réduire',
       expandAll: 'Tout développer',
     },
@@ -33,8 +34,10 @@ const ca = {
     navigation: {
       manage: {
         header: {
+          LIST: 'Toutes les navigations',
           CREATE: 'Nouvelle navigation',
           DELETE: 'Suppression',
+          ERROR: 'Erreur',
           EDIT: 'Édition de "{name}"',
         },
         button: {
@@ -42,13 +45,16 @@ const ca = {
           delete: 'Supprimer',
           save: 'Enregistrer',
           edit: 'Modifier',
+          create: 'Créer',
           goBack: 'Retourner',
           purge: 'Effacer le cache de lecture',
         },
         table: {
+          id: 'Id',
           name: 'Nom',
           locale: 'Versions locales',
           visibility: 'Visibilité',
+          hasSelected: '{count} entrées sélectionnées',
         },
         footer: {
           button: {
@@ -61,6 +67,14 @@ const ca = {
         },
         delete: {
           header: 'Les navigations suivantes seront supprimées :',
+        },
+        error: {
+          header: 'Une erreur est survenue :(',
+          message: 'Une erreur est survenue lors du traitement de la demande.',
+        },
+        navigation: {
+          visible: 'visible',
+          hidden: 'caché',
         },
       },
       form: {
@@ -273,6 +287,10 @@ const ca = {
         cascadeMenuAttached: {
           label: 'Cascade du menu attaché',
           hint: 'Désactiver si vous ne voulez pas que "Menu attaché" se propage aux éléments enfants',
+        },
+        overviewUi: {
+          label: 'Nova interfície de navegació',
+          hint: 'Activa la nova interfície amb una vista general i pàgines de detall',
         },
         preferCustomContentTypes: {
           label: 'Préférer les types de contenu personnalisés',

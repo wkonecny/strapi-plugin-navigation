@@ -12,6 +12,7 @@ const tr = {
     meta: 'ID: { id }, slug: { key }',
     action: {
       newItem: 'Yeni Öğe',
+      manage: 'Yönet',
       collapseAll: 'Tümünü Daralt',
       expandAll: 'Tümünü Genişlet',
     },
@@ -33,8 +34,10 @@ const tr = {
     navigation: {
       manage: {
         header: {
+          LIST: 'Tüm navigasyonlar',
           CREATE: 'Yeni navigasyon',
           DELETE: 'Silme işlemi',
+          ERROR: 'Hata',
           EDIT: '"{name}" düzenleniyor',
         },
         button: {
@@ -42,13 +45,16 @@ const tr = {
           delete: 'Sil',
           save: 'Kaydet',
           edit: 'Düzenle',
+          create: 'Oluştur',
           goBack: 'Geri dön',
           purge: 'Önbelleği temizle',
         },
         table: {
+          id: 'Id',
           name: 'Ad',
           locale: 'Dil versiyonları',
           visibility: 'Görünürlük',
+          hasSelected: '{count} öğe seçildi',
         },
         footer: {
           button: {
@@ -61,6 +67,14 @@ const tr = {
         },
         delete: {
           header: 'Aşağıdaki navigasyonlar kaldırılacaktır:',
+        },
+        error: {
+          header: 'Bir hata oluştu :(',
+          message: 'İstek işlenirken bir hata oluştu.',
+        },
+        navigation: {
+          visible: 'görünür',
+          hidden: 'gizli',
         },
       },
       form: {
@@ -272,6 +286,10 @@ const tr = {
         cascadeMenuAttached: {
           label: 'Kademeli menü eklendi',
           hint: '"Menü eklendi" seçeneğinin alt öğelere yayılmasını istemiyorsanız devre dışı bırakın',
+        },
+        overviewUi: {
+          label: 'Yeni navigasyon arayüzü',
+          hint: 'Navigasyon genel görünümü ve detay sayfaları içeren yeni arayüzü etkinleştirir',
         },
         preferCustomContentTypes: {
           label: 'Özel API İçerik Türlerini Tercih Et',
